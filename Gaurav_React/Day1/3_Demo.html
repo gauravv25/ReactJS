@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="container1"></div>
+	<script src="./public/scripts/react/react.js" type="text/javascript"></script>
+	<script src="./public/scripts/react/react-dom.js" type="text/javascript"></script>
+	<script src="./public/scripts/babel/browser.js" type="text/javascript"></script>
+	<script type="text/babel">
+		//component specification 
+		var Hello = React.createClass({
+			render: function(){
+				return <h1 id = "hOne"> Hello World </h1>
+			}
+		})
+
+		
+		ReactDOM.render(<Hello/>, document.getElementById("container1"));
+
+
+	</script>
+</body>
+</html>

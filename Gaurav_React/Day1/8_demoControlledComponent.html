@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .check {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <input id="t1" type="text" value="Pravin"/>
+    <script src="./public/scripts/react/react.js"></script>
+    <script src="./public/scripts/react/react-dom.js"></script>
+    <script src="./public/scripts/babel/browser.js"></script>
+    <script type="text/babel">
+        var Main = React.createClass({
+            getInitialState:function(){
+                return { name: "Manish" };
+            },
+            handleChange:function(evt){
+                this.setState({name:evt.target.value});
+            },
+            render: function(){
+                return (
+                    <div>
+                        <input type="text" value={this.state.name} onChange={this.handleChange}/>
+                        <br/>
+                        <input type="text" value="Abhijeet"/>
+                        <br/>
+                        <input type="text" defaultValue="RK"/>
+                        <br/>
+                        <h2>Hello, {this.state.name}</h2>
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(<Main />, document.getElementById("container"));
+    </script>
+</body>
+
+</html>
